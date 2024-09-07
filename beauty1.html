@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>cart</title>
+        <style>
+            
+            .card{
+                border:1px solid black;
+                width: max-content;
+                text-align: Center;
+                display:inline-block;
+                margin: 5px;
+            
+            }
+            .card img{
+                width:500px;
+                padding:5px;
+                height: 400px;
+            }
+            .title{
+                font-weight: bold;
+                margin:20px;
+            }
+            button{
+                border: 2px solid #e1701a;
+                background: #f7a440;
+                color:white;
+                font-weight: bold;
+                margin: 20px;
+                padding:5px 10px;
+            }
+            main{
+                margin-left: 50px;
+                
+            }
+            *{
+                background-color: beige;
+            }
+        </style>
+    </head>
+<body>
+    <main>
+    <div class="container">
+        <div class="card" id="item1">
+            <img src="products/beauty/b1.png">
+            
+        </div>
+        <h1>Lakme</h1>
+        <p style="font-style: oblique;font-weight: 400;">Women White & Maroon Printed Kurta with Palazzos </p>
+        <h4>MRP:Rs.249</h4>
+        <ul>
+            <li>100% Original Products</li>
+            <li>Pay on delivery might not be available</li>
+            <li>Easy 14 days returns and exchanges</li>
+        </ul>
+        <div>
+            <br><label>Size:</label>
+            <select>
+                <option>select size</option>
+                <option>32</option>
+                <option>34</option>
+                <option>36</option>
+            </select>
+        </div>
+        <h2>Best offers</h2>
+        <ul>
+            <li>10% Instant Discount on Kotak Credit and Debit Cards--on Min Spend Rs 3,000. Maximum Discount of Rs 1,000</li>
+            <li>Flat Rs 150 Cashback for select users or Up To Rs 500 Cashback on CRED pay transactions.
+                --Min Spend Rs 1,000. Available only on Android Devices.</li>
+        </ul>
+        <br><br><button>Add to Cart</button>
+        <a href="signup.html"><button>Buy now</button></a>
+    </div>
+    </main>
+    <script>
+    var a=document.querySelector('h1')
+    var sel=document.querySelector('.select')
+    var button=document.getElementsByTagName('button');
+    for(but of button){
+        but.addEventListener('click',(e)=>{
+            var add=Number(a.getAttribute('data-count')||0);
+            a.setAttribute('data-count',add+1);
+            a.classList.add('zero');
+        })
+    }
+</script>
+</body>
+</html>
